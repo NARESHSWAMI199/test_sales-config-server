@@ -1,1 +1,10 @@
-
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${EUREKA_INSTANCE_INSTANCE-ID}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone : http://eureka-server:8761/eureka  
+      #8761 is the default server for the Eureka discovery server
