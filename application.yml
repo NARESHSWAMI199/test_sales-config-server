@@ -1,7 +1,7 @@
 eureka:
   instance:
     prefer-ip-address: true
-    instance-id: ${EUREKA_INSTANCE_INSTANCE-ID}
+    #instance-id: ${EUREKA_INSTANCE_INSTANCE-ID}
   client:
     fetch-registry: true
     register-with-eureka: true
