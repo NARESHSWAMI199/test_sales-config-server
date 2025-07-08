@@ -1,0 +1,24 @@
+server:
+  port : 8081
+
+
+spring:
+  application:
+    name : sales-auth
+
+  datasource:
+    url: jdbc:postgresql://sales-auth-db:5432/auth_db
+    username: admin
+    password: password
+    driver-class-name : org.postgresql.Driver
+
+  jpa:
+    hibernate :
+      ddl-auto : update
+    show-sql : true
+    properties:
+      hibernate:
+        dialect : org.hibernate.dialect.PostgreSQLDialect
+  config:
+    import: configserver:http://sales-config-server:8888/
+
