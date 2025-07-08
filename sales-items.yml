@@ -10,9 +10,6 @@ spring:
     password: password
     driver-class-name : org.postgresql.Driver
 
-  config:
-    import : configserver:http://sales-config-server:8888/
-
   jpa:
     hibernate :
       ddl-auto : update
