@@ -1,0 +1,14 @@
+server:
+  port : 8080
+
+spring:
+  application:
+    name : sales-gateway
+
+    cloud:
+      gateway:
+        routes:
+          - id: sales-auth
+            uri: lb://sales-auth  # here user-service application name, which registered on Eureka, a so that's why we are not using localhost or IP here
+            predicates:
+              - Path=/auth/**
